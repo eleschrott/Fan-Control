@@ -3,7 +3,7 @@
 ####################################################
 
 For this project you need to install a board file to give the Arduino IDE knowledge about the ATtiny.
-Here you can find it: (https://github.com/SpenceKonde/ATTinyCore)
+Here you can find it: https://github.com/SpenceKonde/ATTinyCore
 
 You can program the ATtiny by ISP. I use here an Atmel ICE in ISP mode, but also an Arduino Uno is handy to program this µController.
 
