@@ -2,13 +2,13 @@
 # How to set the ATtiny fuses with the Arduino IDE #
 ####################################################
 
-For this project you need to install a board file to give the IDE knowledge about the ATtiny.
+For this project you need to install a board file to give the Arduino IDE knowledge about the ATtiny.
 Here you can find it: https://github.com/SpenceKonde/ATTinyCore
 
-You can program the ATtiny by ISP. I use here an Atmel ICE in ISP mode, but also an Arduino Uno is handy to program this µController.
+You can program the ATtiny by ISP. I use here an Atmel ICE in ISP mode, but also an Arduino Uno is handy to program this ÂµController.
 
 To set the CPU frequency to 8MHz with the Arduino IDE, you need to start to burn a bootloader.
-This doesn't burn a bootloader in reality, but sets the needed fuses on the Tiny.
+This "burning" doesn't burn a bootloader in reality, but sets the needed fuses on the Tiny.
 
 Set the fuses:
 ----------------------------------------------------
@@ -22,8 +22,8 @@ Use the following settings (e.g. for a ATtiny85):
 4. B.O.D. level					: B.O.D. disabled
 5. Save EEPROM					: EEPROM retained
 6. Timer 1 clock				: CPU
-7. LTO							: enabled
-8. millis()/micros()			: enabled
+7. LTO							    : enabled
+8. millis()/micros()		: enabled
 
 Execute the menu item Tools / Burn Bootloader.
 ----------------------------------------------------
