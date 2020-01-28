@@ -21,9 +21,10 @@ For the hardware you need the following:
 + Connectors: 1x 2Pin, 1x 3Pin, 1x 4Pin
 + Pinheader 02x06 Pins
 + 12V DC fan
-***
+
 The project needs =5V for the control and =12V for the fan.
 
+***
 In order to define the ranges for the control, the header file **Fancontrol.h** contains some constants, which can be adapted to the respective requirements.
 
 ```c
