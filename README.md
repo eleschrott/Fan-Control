@@ -55,4 +55,4 @@ constexpr auto FAN_MID      = 150; // Maximum for controlled normal run and mini
 constexpr auto FAN_HIGH     = 255; // Maximum for controlled high speed
 ```
 To operate the µController with 8MHz some fuses must be set. This is described for the Arduino IDE in the file 
-[How2SetCPUFuses.txt](../Arduino/FanControl/How2SetCPUFuses.txt).
+[How2SetCPUFuses.txt](/Arduino/FanControl/How2SetCPUFuses.txt).
