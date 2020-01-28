@@ -17,7 +17,7 @@ For the hardware you need the following (fits on the attached board layout):
 + Darlington transistor TIP122 (TO220)
 + Diode 1N4007 (THT)
 + Resistors: 1k, 10k (SMD 0805)
- (+ Capacitors: 100n, 10µ (SMD 0603)
++ Capacitors: 100n, 10µ (SMD 0603)
 + Connectors: 1x 2Pin, 1x 3Pin, 1x 4Pin (THT)
 + Pinheader 02x06 Pins (THT)
 + 12V DC fan
