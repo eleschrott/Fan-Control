@@ -24,6 +24,7 @@ For the hardware you need the following:
 
 The project needs =5V for the control and =12V for the fan.
 
+The parts I used for the circuit board were still available in my workshop. Of course the used parts can vary in size and shape. It is only important that the microcontroller used harmonizes with the software and that the peripherals can be controlled safely.
 ***
 The circuit diagram is quite clear and does not require any great explanation. 
 <p align="left"><img src="KiCAD/Fancontrol/fancontrol_schem.png"/></p>
