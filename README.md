@@ -12,14 +12,14 @@ The example shown here, refers to an ATtiny85 from Atmel. For other types or man
 Circuit diagram and board layout are also included. These files are created with KiCad.
 ***
 For the hardware you need the following:
-+ Atmel ATtiny85 (or similar)
-+ Board mounted Temperature Sensor LM35DT 
-+ Darlington transistor TIP122
-+ Diode 1N4007
-+ Resistors: 1k, 10k
-+ Capacitors: 100n, 10µ
-+ Connectors: 1x 2Pin, 1x 3Pin, 1x 4Pin
-+ Pinheader 02x06 Pins
++ Atmel ATtiny85 or similar (SOIC-8)
++ Board mounted Temperature Sensor LM35DT (TO220) 
++ Darlington transistor TIP122 (TO220)
++ Diode 1N4007 (THT)
++ Resistors: 1k, 10k (SMD 0805)
+ (+ Capacitors: 100n, 10µ (SMD 0603)
++ Connectors: 1x 2Pin, 1x 3Pin, 1x 4Pin (THT)
++ Pinheader 02x06 Pins (THT)
 + 12V DC fan
 
 The project needs =5V for the control and =12V for the fan.
