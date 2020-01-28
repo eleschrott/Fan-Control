@@ -1,8 +1,8 @@
 /// ***********************
 /// Name       :   FanControl.ino
 /// Created    :   28.01.2020
-/// Version     :   1.0
-/// Author      :   W.Schweiger
+/// Version     :   1.0.2020
+/// Author      :   eleschrott
 /// 
 /// Controls the speed of a fan driven by PWM with measured temperature.
 /// Emphasis is placed on maximum noise reduction.
