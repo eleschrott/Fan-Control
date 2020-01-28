@@ -10,3 +10,41 @@ The 32kHz are necessary because some fans tend to produce an unsightly whistle a
 The example shown here, refers to an ATtiny85 from Atmel. For other types or manufacturers other fuses may be set. These can be found in the respective documentations.
 
 Circuit diagram and board layout are also included. These files are created with KiCad.
+***
+For the hardware you need the following:
++ Atmel ATtiny85 (or similar)
++ Board mounted Temperature Sensor LM35DT 
++ Darlington transistor TIP122
++ Diode 1N4007
++ Resistors: 1k, 10k
++ Capacitors: 100n, 10µ
++ Connectors: 1x 2Pin, 1x 3Pin, 1x 4Pin
++ Pinheader 02x06 Pins
++ 12V DC fan
+***
+The project needs =5V for the control and =12V for the fan.
+
+In order to define the ranges for the control, the header file **Fancontrol.h** contains some constants, which can be adapted to the respective requirements.
+
+```c
+// Temperature values to define the ranges.
+// We use no float variables, all temperatures gets calculated in 16Bit uint16_t!
+// This means a value of 2350 corresponds to a temperature of 23.50 degrees Celsius
+constexpr auto TEMP_MINHYS  = 2350; // Hysteresis for minimum temp to switch off the running fan
+constexpr auto TEMP_MIN     = 2500; // Minimum Temp to switch on the fan
+constexpr auto TEMP_NORMHYS = 2850; // Hysteresis for temp to switch normal range off
+constexpr auto TEMP_NORM    = 3000; // Start of normal range
+constexpr auto TEMP_MID     = 5000; // Temp to go to high range
+constexpr auto TEMP_MAX     = 7500; // Max temperature
+```
+
+There are also constants for the adaptation of the used fan. Not every fan runs with the same PWM values.
+```c
+// Fan responsible parameter to run the fan in smooth and low noise as possible
+// Adjust this values to your fan model!
+constexpr auto FAN_OFF      =   0; //
+constexpr auto FAN_LOWLOW   =  63; // Lowest PWM to run the fan save on minimum noise
+constexpr auto FAN_LOW      =  75; // Minimum for controlled "normal" run
+constexpr auto FAN_MID      = 150; // Maximum for controlled normal run and minimum for high speed run
+constexpr auto FAN_HIGH     = 255; // Maximum for controlled high speed
+```
