@@ -517,4 +517,6 @@ Wire Wire Line
 	4950 7400 4600 7400
 Wire Wire Line
 	4600 7400 4600 6800
+Text Notes 3550 3450 0    39   ~ 0
+You can use a LM35DT as sensor,\nthis type works fine between -55ºC and +150ºC.
 $EndSCHEMATC
