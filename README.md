@@ -27,7 +27,7 @@ The project needs =5V for the control and =12V for the fan.
 ***
 The circuit diagram is quite clear and does not require any great explanation. 
 <p align="left"><img src="KiCAD/Fancontrol/fancontrol_schem.png"/></p>
-<p></p>
+
 ***
 
 In order to define the ranges for the control, the header file **Fancontrol.h** contains some constants, which can be adapted to the respective requirements.
