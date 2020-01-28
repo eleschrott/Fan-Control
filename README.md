@@ -21,7 +21,8 @@ For the hardware you need the following (fits on the attached board layout):
 + Pinheader 02x06 Pins (THT)
 + 12V DC fan
 
-The project needs =5V for the control and =12V for the fan.
+The project requires two DC voltages, 5V for the µController and 12V for the fan. The power consumption at 12V depends on the fan type. The µController needs very little current (max.15mA). In order to cope with an increased power consumption of the fan, it is recommended to provide the transistor with a heat sink. At low current consumption, the transistor can be operated without.
+The circuit board is designed in such a way that the transistor is soldered in reverse, with the front side lying on the board, so that a heat sink can be mounted as flat as possible.
 
 The parts I used for the circuit board were still available in my workshop. Of course the used parts can vary in size and shape. It is only important that the microcontroller used harmonizes with the software and that the peripherals can be controlled safely.
 ***
