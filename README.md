@@ -11,7 +11,7 @@ The example shown here, refers to an ATtiny85 from Atmel. For other types or man
 
 Circuit diagram and board layout are also included. These files are created with KiCad.
 ***
-For the hardware you need the following:
+For the hardware you need the following (fits on the attached board layout):
 + Atmel ATtiny85 or similar (SOIC-8)
 + Board mounted Temperature Sensor LM35DT (TO220) 
 + Darlington transistor TIP122 (TO220)
