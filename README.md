@@ -1,5 +1,5 @@
 # Fan-Control
-### Controls by temerature the speed of a fan driven by PWM
+### Controls by temerature the speed of a fan driven with PWM
 ***
 This small project is intended for cooling situations where the focus is on maximum noise reduction. To achieve this goal, the temperature is measured with a sensor (LM35DT) and processed by a microcontroller. This µC generates a pulse width modulated signal with 32kHz for a fan. The duty cycle of this PWM is directly proportional to the measured temperature.
 
