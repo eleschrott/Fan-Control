@@ -23,7 +23,7 @@ Use the following settings (e.g. for a ATtiny85):
 5. Save EEPROM					: EEPROM retained
 6. Timer 1 clock				: CPU
 7. LTO						: enabled
-8. millis()/micros()  			: enabled
+8. millis()/micros()    			: enabled
 
 Execute the menu item Tools / Burn Bootloader.
 ----------------------------------------------------
