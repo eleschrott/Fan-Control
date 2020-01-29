@@ -69,17 +69,6 @@ F 3 "~" H 8000 2300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C1
-U 1 1 5E1FA283
-P 5950 2300
-F 0 "C1" V 6000 2400 50  0000 C CNN
-F 1 "10µ" V 5850 2450 50  0000 C CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" H 5988 2150 50  0001 C CNN
-F 3 "~" H 5950 2300 50  0001 C CNN
-	1    5950 2300
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:C C2
 U 1 1 5E1FB28D
 P 5950 2600
@@ -158,7 +147,7 @@ Text GLabel 9550 4000 2    50   Input ~ 0
 ICSP_RST
 Text GLabel 9550 4100 2    50   Input ~ 0
 ICSP_SCK
-Text GLabel 9550 4200 2    50   Input ~ 0
+Text GLabel 9550 4200 2    50   Output ~ 0
 ICSP_MISO
 Text GLabel 9550 4300 2    50   Input ~ 0
 ICSP_MOSI
@@ -303,11 +292,7 @@ Wire Wire Line
 Wire Wire Line
 	3050 4300 3050 4700
 Wire Wire Line
-	3450 4800 3450 5050
-Wire Wire Line
-	3450 5050 2850 5050
-Wire Wire Line
-	2850 5050 2850 4500
+	3450 4800 3450 4900
 $Comp
 L power:GND #PWR?
 U 1 1 5E26DA2E
@@ -322,9 +307,7 @@ F 3 "" H 3350 5300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3550 4800 3550 5150
-Wire Wire Line
-	3550 5150 2700 5150
+	3550 4800 3550 5000
 Connection ~ 2700 3100
 Wire Wire Line
 	5500 2300 5500 2600
@@ -362,7 +345,7 @@ Wire Wire Line
 Wire Wire Line
 	2250 4500 2850 4500
 Wire Wire Line
-	2700 3100 2700 5150
+	2700 3100 2700 5000
 Wire Wire Line
 	2950 4600 2250 4600
 Wire Wire Line
@@ -519,4 +502,21 @@ Wire Wire Line
 	4600 7400 4600 6800
 Text Notes 3550 3450 0    39   ~ 0
 You can use a LM35DT as sensor,\nthis type works fine between -55ºC and +150ºC.
+Wire Wire Line
+	3450 4900 2850 4900
+Wire Wire Line
+	2850 4900 2850 4500
+Wire Wire Line
+	3550 5000 2700 5000
+$Comp
+L Device:CP C1
+U 1 1 5E31CA3E
+P 5950 2300
+F 0 "C1" V 6000 2400 50  0000 C CNN
+F 1 "10µ" V 5800 2450 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 5988 2150 50  0001 C CNN
+F 3 "~" H 5950 2300 50  0001 C CNN
+	1    5950 2300
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
