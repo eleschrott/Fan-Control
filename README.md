@@ -55,6 +55,7 @@ constexpr auto FAN_LOW      =  75; // Minimum for controlled "normal" run
 constexpr auto FAN_MID      = 150; // Maximum for controlled normal run and minimum for high speed run
 constexpr auto FAN_HIGH     = 255; // Maximum for controlled high speed
 ```
+***
 To operate the µController with 8MHz some fuses must be set. For the Arduino IDE, this is described in the file [How2SetCPUFuses.txt](/Arduino/FanControl/How2SetCPUFuses.txt).
 
 ISP is used to program the microcontroller. It is also possible to flash the µcontroller before soldering and omit the pin headers for ISP. For adjustments to the program it is recommended to mount the 6pin header.
