@@ -45,9 +45,6 @@ constexpr auto FAN_PROBLEM  = 50; // Problem PWM speed
 constexpr auto FAN_FIX      = 63; // PWM value for save start
 #endif
 
-// Macro to set pre scale to one -> 32kHz PWM
-#define SetPWM32kHz() TCCR0B = TCCR0B & (0b11111000 | 0b001)
-
 uint16_t readTemp(void);
 void setFanSpeed(uint8_t speed);
 
