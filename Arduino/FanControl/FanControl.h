@@ -36,7 +36,7 @@ constexpr auto FAN_HIGH     = 255; // Maximum for controlled high speed
 #define FAN_SPEED_WORKAROUND 0
 
 // Parameter for workaround for fan "spinning hole"
-// If your fan has problem on special PWM value, where is no start possible, use the  parameter FAN_PROBLEM and FAN_FIX
+// If your fan has problem on special PWM value, where is no start possible, use the parameter FAN_PROBLEM and FAN_FIX
 // To switch on, uncomment next line:
 // #define FAN_SPEED_WORKAROUND 1
 
