@@ -59,6 +59,11 @@ constexpr auto FAN_HIGH     = 255; // Maximum for controlled high speed
 To operate the µController with 8MHz some fuses must be set. For the Arduino IDE, this is described in the file [How2SetCPUFuses.txt](/Arduino/FanControl/How2SetCPUFuses.txt).
 
 On the web site [Engbedded](http://www.engbedded.com/fusecalc) you can find a "fuse calculator". Here you can verify the Low, High and Extended fuses.
+```
+avrdude: safemode: lfuse reads as E2
+avrdude: safemode: hfuse reads as D7
+avrdude: safemode: efuse reads as FF
+```
 <p align="left"><img src="Arduino/FanControl/images/fusecalc.png"/></p>
 
 ***
