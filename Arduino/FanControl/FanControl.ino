@@ -56,7 +56,7 @@ void setFanSpeed(uint8_t _speed)
 
 void setup()
 {
-    SetPWM32kHz(); // Set the PWM frequency to 32kHz
+    TCCR0B = TCCR0B & (0b11111000 | 0b001); // Set pre scale to one -> 32kHz PWM
 
     analogReference(INTERNAL);
     pinMode(FAN_PIN, OUTPUT);
