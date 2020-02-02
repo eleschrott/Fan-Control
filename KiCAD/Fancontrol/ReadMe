@@ -1,1 +1,4 @@
 Files for KiCad 5.1.5
+
+It is not necessary to have a two-sided circuit board. If you want to make the circuit board yourself, one layer is perfectly sufficient.
+The layout included here is single sided, the top side consists only of a groundplane.
