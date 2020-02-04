@@ -1,7 +1,7 @@
 /// ***********************
 /// Name       :   FanControl.ino
-/// Created    :   28.01.2020
-/// Version     :   1.0.2020
+/// Created    :   04.Feb. 2020
+/// Version     :   1.01.2020
 /// Author      :   eleschrott
 /// 
 /// Controls the speed of a fan driven by PWM with measured temperature.
@@ -20,16 +20,23 @@
 /// ********************************************************************************
 uint16_t readTemp(void)
 {
-    uint16_t temp;
+    uint16_t actTemp;
+    static int16_t lastTemp = 0;
 
     // Determines the sensor value three times for more accurate results
-    temp = (uint16_t)analogRead(TEMP_SENSOR_PIN);
+    actTemp = (uint16_t)analogRead(TEMP_SENSOR_PIN);
     delay(100);
-    temp = temp + (uint16_t)analogRead(TEMP_SENSOR_PIN);
+    actTemp = actTemp + (uint16_t)analogRead(TEMP_SENSOR_PIN);
     delay(100);
-    temp = temp + (uint16_t)analogRead(TEMP_SENSOR_PIN);
+    actTemp = actTemp + (uint16_t)analogRead(TEMP_SENSOR_PIN);
+    actTemp= (uint16_t)(((actTemp * (uint64_t)TEMP_CONST_C) / 3) / 10000000);
+ 
+    if (((int16_t)(actTemp + TEMP_OFFSET) > lastTemp) || ((int16_t)(actTemp - TEMP_OFFSET) < lastTemp))
+    {
+        lastTemp = (int16_t)actTemp;
+    }
 
-    return (uint16_t)(((temp * (uint64_t)TEMP_CONST_C) / 3) / 10000000);
+    return lastTemp;
 }
 
 /// ********************************************************************************
@@ -40,23 +47,28 @@ uint16_t readTemp(void)
 /// ********************************************************************************
 void setFanSpeed(uint8_t _speed)
 {
-    static uint8_t actualFanSpeed = FAN_OFF;
+    static int16_t actualFanSpeed = FAN_OFF;
 
-    if (_speed != actualFanSpeed)
+    if ((int16_t)_speed != actualFanSpeed)
     {
-        // Workaround for Fan "spinning hole"
-        #if defined FAN_SPEED_WORKAROUND && FAN_SPEED_WORKAROUND == 1 
-        if ((speed >= FAN_PROBLEM) && (speed < FAN_FIX)) speed = FAN_FIX;
-        #endif
+        if (((int16_t)_speed > (actualFanSpeed + FAN_OFFSET)) ||
+           (((int16_t)_speed < (actualFanSpeed - FAN_OFFSET))) ||
+             (_speed == FAN_HIGH))
+        {
+            // Workaround for Fan "spinning hole"
+            #if defined FAN_SPEED_WORKAROUND && FAN_SPEED_WORKAROUND == 1 
+            if ((speed >= FAN_PROBLEM) && (speed < FAN_FIX)) speed = FAN_FIX;
+            #endif
 
-        analogWrite((uint8_t)FAN_PIN, (int)_speed);
-        actualFanSpeed = _speed;
+            analogWrite((uint8_t)FAN_PIN, (int)_speed);
+            actualFanSpeed = (int16_t)_speed;
+        }
     }
 }
 
 void setup()
 {
-    TCCR0B = TCCR0B & (0b11111000 | 0b001); // Set pre scale to one -> 32kHz PWM
+    TCCR0B = TCCR0B & (0b11111000 | 0b001); // Set the PWM frequency to 32kHz
 
     analogReference(INTERNAL);
     pinMode(FAN_PIN, OUTPUT);
