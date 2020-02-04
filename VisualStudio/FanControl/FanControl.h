@@ -1,6 +1,6 @@
 /// ***********************
 /// Name       :   FanControl.h
-/// Created    :   04.Feb. 2020
+/// Created    :   04.Feb 2020
 /// Version    :   01.01.2020
 /// Author     :   eleschrott
 /// ***********************
