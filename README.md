@@ -43,17 +43,21 @@ constexpr auto TEMP_NORMHYS = 2850; // Hysteresis for temp to switch normal rang
 constexpr auto TEMP_NORM    = 3000; // Start of normal range
 constexpr auto TEMP_MID     = 5000; // Temp to go to high range
 constexpr auto TEMP_MAX     = 7500; // Max temperature
+constexpr auto TEMP_OFFSET  = 0015; // Minimum integer offset, from which a temperature control becomes effective,
+                        				    // default is 15 -> 0.15 degree.
 ```
 
 There are also constants for the adaptation of the used fan. Not every fan runs with the same PWM values.
 ```c
 // Fan responsible parameter to run the fan in smooth and low noise as possible
 // Adjust this values to your fan model!
-constexpr auto FAN_OFF      =   0; //
+constexpr auto FAN_OFF      =   0; // PWM 0 -> Fan off!
 constexpr auto FAN_LOWLOW   =  63; // Lowest PWM to run the fan save on minimum noise
 constexpr auto FAN_LOW      =  75; // Minimum for controlled "normal" run
 constexpr auto FAN_MID      = 150; // Maximum for controlled normal run and minimum for high speed run
 constexpr auto FAN_HIGH     = 255; // Maximum for controlled high speed
+constexpr auto FAN_OFFSET   =   2; // Minimum integer offset, from which a PWM regulation becomes effective,
+                        				   // default is 2 -> ~ 0.8%. 
 ```
 ***
 To operate the µController with 8MHz some fuses must be set. For the Arduino IDE, this is described in the file [How2SetCPUFuses.txt](/Arduino/FanControl/How2SetCPUFuses.txt).
