@@ -1,8 +1,8 @@
 /// ***********************
 /// Name       :   FanControl.h
-/// Created    :   04.Feb. 2020
-/// Version     :   01.01.2020
-/// Author      :   eleschrott
+/// Created    :   04.Feb 2020
+/// Version    :   01.01.2020
+/// Author     :   eleschrott
 /// ***********************
 
 #ifndef _FANCONTROL_H
@@ -24,8 +24,8 @@ constexpr auto TEMP_NORMHYS = 2850; // Hysteresis for temp to switch normal rang
 constexpr auto TEMP_NORM    = 3000; // Start of normal range
 constexpr auto TEMP_MID     = 5000; // Temp to go to high range
 constexpr auto TEMP_MAX     = 7500; // Max temperature
-constexpr auto TEMP_OFFSET	= 0015; // Minimum integer offset, from which a temperature control becomes effective,
-									// default is 15 -> 0.15 degree.
+constexpr auto TEMP_OFFSET  = 0015; // Minimum integer offset, from which a temperature control becomes effective,
+				    // default is 15 -> 0.15 degree.
 
 // Fan responsible parameter to run the fan in smooth and low noise as possible
 // Adjust this values to your fan model!
@@ -34,8 +34,8 @@ constexpr auto FAN_LOWLOW   =  63; // Lowest PWM to run the fan save on minimum 
 constexpr auto FAN_LOW      =  75; // Minimum for controlled "normal" run
 constexpr auto FAN_MID      = 150; // Maximum for controlled normal run and minimum for high speed run
 constexpr auto FAN_HIGH     = 255; // Maximum for controlled high speed
-constexpr auto FAN_OFFSET	=   2; // Minimum integer offset, from which a PWM regulation becomes effective,
-								   // default is 2 -> ~ 0.8%. 
+constexpr auto FAN_OFFSET   =   2; // Minimum integer offset, from which a PWM regulation becomes effective,
+				   // default is 2 -> ~ 0.8%. 
 
 #define FAN_SPEED_WORKAROUND 0
 
