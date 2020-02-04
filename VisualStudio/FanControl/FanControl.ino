@@ -1,8 +1,8 @@
 /// ***********************
 /// Name       :   FanControl.ino
-/// Created    :   04.Feb. 2020
-/// Version     :   1.01.2020
-/// Author      :   eleschrott
+/// Created    :   04.Feb 2020
+/// Version    :   1.01.2020
+/// Author     :   eleschrott
 /// 
 /// Controls the speed of a fan driven by PWM with measured temperature.
 /// Emphasis is placed on maximum noise reduction.
@@ -68,7 +68,7 @@ void setFanSpeed(uint8_t _speed)
 
 void setup()
 {
-    TCCR0B = TCCR0B & (0b11111000 | 0b001); // Set the PWM frequency to 32kHz
+    TCCR0B = TCCR0B & (0b11111000 | 0b001); // Set pre scale to one -> 32kHz PWM
 
     analogReference(INTERNAL);
     pinMode(FAN_PIN, OUTPUT);
