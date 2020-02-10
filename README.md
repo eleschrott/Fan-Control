@@ -8,7 +8,7 @@ The program is small enough to work on narrow-breasted microcontrollers. Only an
 
 The example shown here, refers to an ATtiny85 from Atmel. For other types or manufacturers other fuses may be set. These can be found in the respective documentations of the µController.
 
-Circuit diagram and board layout are also included. These files are created with KiCad.
+[Circuit diagram and board layout](/KiCAD/Fancontrol) are also included, these files are created with [KiCad](https://kicad-pcb.org/).
 ***
 For the hardware you need the following (fits on the attached board layout):
 + Atmel ATtiny85 or similar (SOIC-8)
