@@ -53,7 +53,7 @@ void setFanSpeed(uint8_t _speed)
     {
         if (((int16_t)_speed > (actualFanSpeed + FAN_OFFSET)) ||
            (((int16_t)_speed < (actualFanSpeed - FAN_OFFSET))) ||
-             (_speed == FAN_HIGH))
+             (_speed == FAN_HIGH) || (_speed == FAN_OFF))
         {
             // Workaround for Fan "spinning hole"
             #if defined FAN_SPEED_WORKAROUND && FAN_SPEED_WORKAROUND == 1 
