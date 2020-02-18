@@ -74,11 +74,7 @@ void setup()
     pinMode(FAN_PIN, OUTPUT);
 
     setFanSpeed((uint8_t)FAN_HIGH); // Switch fan on/off to indicate start up
-    delay(1000);
-    setFanSpeed((uint8_t)FAN_OFF);
-    delay(2500);
-    setFanSpeed((uint8_t)FAN_LOW);
-    delay(1000);
+    delay(3000);
     setFanSpeed((uint8_t)FAN_OFF);
 }
 
