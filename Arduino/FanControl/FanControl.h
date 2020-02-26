@@ -24,7 +24,7 @@ constexpr auto TEMP_NORMHYS = 2850; // Hysteresis for temp to switch normal rang
 constexpr auto TEMP_NORM    = 3000; // Start of normal range
 constexpr auto TEMP_MID     = 5000; // Temp to go to high range
 constexpr auto TEMP_MAX     = 7500; // Max temperature
-constexpr auto TEMP_OFFSET  = 0015; // Minimum integer offset, from which a temperature control becomes effective,
+constexpr auto TEMP_OFFSET  = 15;   // Minimum integer offset, from which a temperature control becomes effective,
 				    // default is 15 -> 0.15 degree.
 
 // Fan responsible parameter to run the fan in smooth and low noise as possible
