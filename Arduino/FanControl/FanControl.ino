@@ -57,7 +57,7 @@ void setFanSpeed(uint8_t _speed)
         {
             // Workaround for Fan "spinning hole"
             #if defined FAN_SPEED_WORKAROUND && FAN_SPEED_WORKAROUND == 1 
-            if ((speed >= FAN_PROBLEM) && (speed < FAN_FIX)) speed = FAN_FIX;
+            if ((_speed >= FAN_PROBLEM) && (_speed < FAN_FIX)) _speed = FAN_FIX;
             #endif
 
             analogWrite((uint8_t)FAN_PIN, (int)_speed);
