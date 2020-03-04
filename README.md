@@ -18,7 +18,7 @@ For the hardware you need the following (fits on the attached board layout):
 + Resistors: 1k, 10k (SMD 0805)
 + Capacitors: 100n, 10µ (SMD 0603)
 + Connectors: 1x 2Pin, 1x 3Pin, 1x 4Pin (THT)
-+ Pinheader 02x06 Pins (THT)
++ Pinheader 02x03 Pins (THT)
 + 12V DC fan
 
 The project requires two DC voltages, 5V for the µController and 12V for the fan. The power consumption at 12V depends on the fan type. The control needs very little current (max.12mA). In order to cope with an increased power consumption of the fan, it is recommended to provide the transistor with a heat sink. At low current consumption, the transistor can be operated without.
