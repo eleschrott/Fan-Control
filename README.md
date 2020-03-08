@@ -60,7 +60,7 @@ constexpr auto FAN_OFFSET   =   2; // Minimum integer offset, from which a PWM r
                                    // becomes effective, default is 2 -> ~ 0.8%. 
 ```
 ***
-To get this project working with the Arduino IDE, you need to install a board file to give the IDE knowledge about the ATtiny. Here you can find it: (https://github.com/SpenceKonde/ATTinyCore).
+To get this project working with the Arduino IDE, you need to install a board file to give the IDE knowledge about the ATtiny. Here you can find it: https://github.com/SpenceKonde/ATTinyCore.
 To operate the µController with 8MHz some fuses must be set. For the Arduino IDE, this is described in the file [How2SetCPUFuses.txt](/Arduino/FanControl/How2SetCPUFuses.txt).
 
 On the web site [Engbedded](http://www.engbedded.com/fusecalc) you can find a "AVR Fuse Calculator". Here you can verify the Low, High and Extended fuses.
